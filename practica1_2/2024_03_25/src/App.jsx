@@ -1,6 +1,6 @@
 import "./App.css";
-import BookItem from "./components/bookItem/BookItem";
-
+//import BookItem from "./components/bookItem/BookItem";
+import Books from "./components/books/Books";
 
 const books = [
   {
@@ -42,17 +42,7 @@ function App() {
     <div className="d-flex justify-content-center flex-wrap">
       <h2>Books Champion App</h2>
       <p>¡Quiero leer libros!</p>
-      {books.map((book, i) => (
-        <BookItem
-          key={i}
-          title={book.bookTitle}
-          author={book.bookAuthor}
-          pageCount={book.pageCount}
-          rating={book.bookRating}
-          imageUrl={book.imageUrl}
-        />
-      ))}
-      <BookItem />
+      <Books books={books} />
     </div>
   );
 }
