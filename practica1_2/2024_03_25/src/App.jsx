@@ -41,7 +41,7 @@ function App() {
   return (
     <div>
       <h2>Books Champion App</h2>
-      <p>¡Quiero leer libros!</p>
+      <p>I want to read books!!</p>
       <Books books={books} />
     </div>
   );
