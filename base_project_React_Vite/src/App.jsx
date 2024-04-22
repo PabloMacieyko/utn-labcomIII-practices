@@ -50,6 +50,15 @@ function App() {
     setBooks((prev) => [...prev, bookData]);
   };
 
+  const searchHandler = (searchTerm) => {
+    const filteredBooks = BOOKS.filter(
+      (book) =>
+      book.bookTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.bookAuthor.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setBooks(filteredBooks);
+  }
+
 
   return (
     <div>
