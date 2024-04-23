@@ -1,3 +1,5 @@
+import AllBeers from "../allBeers/AllBeers";
+
 const beers = [
   {
     id: 1,
@@ -67,19 +69,11 @@ const beers = [
 const Beers = () => {
   return (
     <div>
-      <h3>Beers List</h3>
-      <ul>
-        {beers.map((beer) => (
-          <li key={beer.id}>
-            Beer name: {beer.beerName} - Style: {beer.beerStyle} - Price: ${" "}
-            {beer.price * 1000} - Aviable:{" "}
-            {beer.available ? "NO" : "SI"}
-          </li>
-        ))}
-      </ul>
+      <h2> Beers List </h2>
+      <AllBeers beers={beers} />
+      
     </div>
   );
 };
-
 
 export default Beers;
