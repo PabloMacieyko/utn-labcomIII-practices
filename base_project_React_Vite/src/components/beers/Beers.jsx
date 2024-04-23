@@ -1,4 +1,5 @@
 import AllBeers from "../allBeers/AllBeers";
+import AvailableBeers from "../availableBeers/AvailableBeers";
 
 const beers = [
   {
@@ -69,9 +70,14 @@ const beers = [
 const Beers = () => {
   return (
     <div>
-      <h2> Beers List </h2>
-      <AllBeers beers={beers} />
-      
+      <div>
+        <h2> Beers List </h2>
+        <AllBeers beers={beers} />
+      </div>
+      <div>
+        <h2> Available Beers </h2>
+        <AvailableBeers beers={beers} />
+      </div>
     </div>
   );
 };

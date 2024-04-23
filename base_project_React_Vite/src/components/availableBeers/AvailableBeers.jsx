@@ -1,9 +1,11 @@
 import BeerItem from "../beerItem/BeerItem";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from 'react-bootstrap/Button';
+import PropTypes from "prop-types";
+import { Button, ListGroup } from 'react-bootstrap';
 import { useState } from "react";
 
-const AllBeers = ({ beers }) => {
+const AvailableBeers = ({ beers }) => {
+  const avaiableBeers = beers.filter((beer) => beer.available);
+
   const [showList, setShowList] = useState(false);
 
   const handleClick = () => {
@@ -12,16 +14,18 @@ const AllBeers = ({ beers }) => {
 
   return (
     <>
-      <Button variant="outline-dark" onClick={handleClick}>{showList ? "Hide" : "Show List"}</Button>
+      <Button variant="outline-dark" onClick={handleClick}>
+        {showList ? "Hide" : "Show List"}
+      </Button>
       {showList && (
         <ListGroup as="ol" numbered>
-          {beers.map((beer) => (
+          {avaiableBeers.map((beer) => (
             <BeerItem
               key={beer.id}
               name={beer.beerName}
               style={beer.beerStyle}
               price={beer.price}
-            ></BeerItem>
+            />
           ))}
         </ListGroup>
       )}
@@ -29,4 +33,8 @@ const AllBeers = ({ beers }) => {
   );
 };
 
-export default AllBeers;
+export default AvailableBeers;
+
+AvailableBeers.propTypes = {
+  beers: PropTypes.array,
+};
