@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 
 const BeerItem = ({ name, style, price }) => {
   return (
-    <ListGroup.Item className="d-flex justify-content-between align-items-start">
+    <ListGroup.Item
+      action
+      className="d-flex justify-content-between align-items-start"
+    >
       <div className="ms-2 me-auto">
         <div className="fw-bold">Beer: {name}</div>
         Style: {style}
