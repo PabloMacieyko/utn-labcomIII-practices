@@ -1,5 +1,6 @@
 import AllBeers from "../allBeers/AllBeers";
 import AvailableBeers from "../availableBeers/AvailableBeers";
+import CountRedIpa from "../countRedIpa/CountRedIpa";
 
 const beers = [
   {
@@ -77,6 +78,10 @@ const Beers = () => {
       <div>
         <h2> Available Beers </h2>
         <AvailableBeers beers={beers} />
+      </div>
+      <div>
+        <h2> Quantity of IPA and Red</h2>
+        <CountRedIpa beers={beers} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import BeerItem from "../beerItem/BeerItem";
 import PropTypes from "prop-types";
-import { Button, ListGroup } from 'react-bootstrap';
+import { Button, ListGroup } from "react-bootstrap";
 import { useState } from "react";
 
 const AvailableBeers = ({ beers }) => {

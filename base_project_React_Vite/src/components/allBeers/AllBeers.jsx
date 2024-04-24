@@ -1,6 +1,6 @@
 import BeerItem from "../beerItem/BeerItem";
 import ListGroup from "react-bootstrap/ListGroup";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import { useState } from "react";
 
 const AllBeers = ({ beers }) => {
@@ -12,7 +12,9 @@ const AllBeers = ({ beers }) => {
 
   return (
     <>
-      <Button variant="outline-dark" onClick={handleClick}>{showList ? "Hide" : "Show List"}</Button>
+      <Button variant="outline-dark" onClick={handleClick}>
+        {showList ? "Hide" : "Show List"}
+      </Button>
       {showList && (
         <ListGroup as="ol" numbered>
           {beers.map((beer) => (
