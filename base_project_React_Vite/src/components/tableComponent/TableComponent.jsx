@@ -8,7 +8,7 @@ const TableComponent = ({ netIncomes }) => {
       <thead>
         <tr>
           <th>Brand</th>
-          <th>Gross Income</th>
+          <th>Net Income</th>
         </tr>
       </thead>
       <tbody>
