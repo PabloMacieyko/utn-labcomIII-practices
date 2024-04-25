@@ -1,5 +1,4 @@
 import "./App.css";
-import AverageCalculator from "./components/averageCalculator/AverageCalculator";
 import TableComponent from "./components/tableComponent/TableComponent";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
   return (
     <div>
       <TableComponent netIncomes={netIncomes} />
-      <AverageCalculator netIncomes={netIncomes} />
     </div>
   );
 }

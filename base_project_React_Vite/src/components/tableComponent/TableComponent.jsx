@@ -1,4 +1,6 @@
 import Table from "react-bootstrap/Table";
+import AverageCalculator from "../averageCalculator/AverageCalculator";
+
 
 const TableComponent = ({ netIncomes }) => {
   return (
@@ -17,6 +19,11 @@ const TableComponent = ({ netIncomes }) => {
           </tr>
         ))}
       </tbody>
+      <tfoot>
+        <tr>
+          <td colSpan="2"><AverageCalculator netIncomes={netIncomes}/></td>
+        </tr>
+      </tfoot>
     </Table>
   );
 };
