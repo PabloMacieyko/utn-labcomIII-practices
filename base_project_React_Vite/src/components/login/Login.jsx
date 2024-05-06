@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUserName] = useState("");
 
   const changeHandler = (e) => {
     const name = e.target.value;
-    setUsername(name);
+    
+    if (name.toLowerCase().includes('o')) {
+      alert("Por favor, ¡Nombres de usuario sin la letra o!");
+      setUserName("");
+    }
+    setUserName(name);
   };
 
   const submitHandler = () => {
@@ -16,7 +21,7 @@ const Login = () => {
     }
 
     if (username.toLowerCase().includes('o')) {
-      alert("Por favor, ¡Nombres de usuario sin la letra o!");
+      alert('Por favor, ¡Nombres de usuario sin la letra o!');
       return;
     }
 
