@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 
 const BookSearch = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [showSearch, setShowSearch] = useState("");
+  const [showSearch, setShowSearch] = useState(false);
 
   const clickHandler = () => {
     setShowSearch(!showSearch);
