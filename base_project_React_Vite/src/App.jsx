@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Books from "./components/books/Books";
 import NewBook from "./components/newBook/NewBook";
+import BookSearch from "./components/bookSearch/BookSearch";
 
 const BOOKS = [
   {
@@ -64,7 +65,7 @@ function App() {
     <div>
       <h2>Books Champion App</h2>
       <p>I want to read books!!</p>
-
+      <BookSearch onSearch={searchHandler} />
       <NewBook onBookDataSaved={saveBookDataHandler} />
       <Books books={books} />
     </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
 const BookSearch = ({ onSearch }) => {
@@ -15,7 +16,7 @@ const BookSearch = ({ onSearch }) => {
 
   return (
     <>
-      <Button onClick={clickHandler}>{showSearch ? "Hide" : "Show"}</Button>
+      <Button onClick={clickHandler}>{showSearch ? "Hide" : "Search"}</Button>
       {showSearch && (
         <Row className="justify-content-center">
           <Col md={6} lg={4}>
@@ -23,7 +24,7 @@ const BookSearch = ({ onSearch }) => {
               <Form.Group controlId="formBasicSearch">
                 <Form.Control
                   type="text"
-                  placeholder="Search book by name..."
+                  placeholder="Search book..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />

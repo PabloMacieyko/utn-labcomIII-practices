@@ -6,7 +6,7 @@ import "./Books.css";
 const Books = ({ books }) => {
   return (
     <div className="d-flex justify-content-center flex-wrap">
-      {books.map((book, index) => (
+      {books.length > 0 ? (books.map((book, index) => (
         <BookItem
           key={index}
           title={book.bookTitle}
@@ -15,7 +15,9 @@ const Books = ({ books }) => {
           rating={book.bookRating}
           imageUrl={book.imageUrl}
         />
-      ))}
+      ))): (
+        <p> No hay nada para mostrar </p>
+      )}
     </div>
   );
 };
